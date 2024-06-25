@@ -36,10 +36,19 @@ def Login_page_2():
     btn1 = Button(window,text="Create New account",bg='Green')
     btn1.place(x=95,y=180)
 
-'''def reg_p():
+def reg_p():
     window = Tk()
-    l1 = Label(window,)'''
-
+    l=Label(window,text="Fill all the details",font = 100)
+    l.place(x= 250)
+    l1 = Label(window,text="First Name",font=50)
+    l1.place(x=0,y=50)
+    e1= Entry(window,width=20,font=("Calibri",10))
+    e1.place(x=100,y=54)
+    l2 = Label(window,text="Last Name",font = 50)
+    l2.place(x=0,y=100)
+    e2 = Entry(window,width=20,font=("Calibri",10))
+    e2.place(x =100,y=105)
+    
 def login_page():
     window = Tk()
     window.configure(bg='sky blue') # background color
