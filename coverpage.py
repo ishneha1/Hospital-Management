@@ -33,9 +33,7 @@ def Login_page_2():
     e2.place(x =100,y=100)
     btn = Button(window,text='LOGIN',bg='red')
     btn.place(x=95,y=140)
-    btn1 = Button(window,text="Create New account",bg='Green')
-    btn1.place(x=95,y=180)
-
+    
 def reg_p():
     window = Tk()
     l=Label(window,text="Fill all the details",font = 100)
@@ -82,5 +80,5 @@ patient=Button(cover,text="For patient",font=800,command=login_page)
 patient.place(x=550,y=280)
 
 
-
-mainloop()
+if __name__ == "__main__":
+    mainloop()
