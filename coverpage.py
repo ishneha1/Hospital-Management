@@ -13,8 +13,9 @@ final_image1=ImageTk.PhotoImage(resize_photo1)
 medical_team=Label(cover,image=final_image1,width=0,height=300)
 medical_team.place(x=0,y=20)
 
-
 def Login_page_2():
+    cover.destroy()
+    global window
     window = Tk()
     window.title("Medical Team login")
     window.configure(bg='#AFEEEE') # background color
@@ -30,11 +31,14 @@ def Login_page_2():
     e2.place(x =100,y=100)
     btn = Button(window,text='LOGIN',bg='white')
     btn.place(x=95,y=140)
-    
-def reg_p():
-    import reg
-    
+
+staff=Button(cover,text="For medical team",font=800,command=Login_page_2)
+staff.place(x=20,y=280)
+
+
 def login_page():
+    cover.destroy()
+    global window
     window = Tk()
     window.title('Patient login')
     window.configure(bg='#AFEEEE') # background color
@@ -50,12 +54,12 @@ def login_page():
     e2.place(x =100,y=100)
     btn = Button(window,text='LOGIN',bg='white')
     btn.place(x=150,y=140)
-    btn1 = Button(window,text="Create New account",bg='white',command = reg_p)
+    btn1 = Button(text="Create New account",bg='white',command = reg_p)
     btn1.place(x=0,y=140)
     
-staff=Button(cover,text="For medical team",font=800,command=Login_page_2)
-staff.place(x=20,y=280)
-
+def reg_p():
+    window.destroy()
+    import reg
 
 
 photo2=Image.open("cover2.png")
