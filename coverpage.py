@@ -15,6 +15,7 @@ medical_team.place(x=0,y=20)
 
 def Login_page_2():
     cover.destroy()
+    global window
     window = Tk()
     window.title("Medical Team login")
     window.configure(bg='#AFEEEE') # background color
