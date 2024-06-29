@@ -39,7 +39,7 @@ def Login_page_2():
         else:
             e2.config(show="")
     c=IntVar()
-    chk=Checkbutton(text='Show Password',variable=c,command=add)
+    chk=Checkbutton(text='Show Password',variable=c,bg= '#AFEEEE',command=add)
     chk.place(x=160, y=140)
 
 
@@ -76,7 +76,7 @@ def login_page():
         else:
             e2.config(show="")
     c=IntVar()
-    chk=Checkbutton(text='Show Password',variable=c,command=add)
+    chk=Checkbutton(text='Show Password',variable=c,bg= '#AFEEEE',command=add)
     chk.place(x=130, y=125)
     
   
