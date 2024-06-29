@@ -32,7 +32,6 @@ def Login_page_2():
     e2.place(x =100,y=100)
     btn = Button(window,text='LOGIN',bg='white')
     btn.place(x=95,y=140)
-    
 
     def add():
         if c.get()==0:
@@ -42,6 +41,7 @@ def Login_page_2():
     c=IntVar()
     chk=Checkbutton(text='Show Password',variable=c,command=add)
     chk.place(x=160, y=140)
+
 
 
 staff=Button(cover,text="For medical team",font=800,command=Login_page_2)
@@ -70,7 +70,6 @@ def login_page():
     btn1 = Button(text="Create New account",bg='white',command = reg_p)
     btn1.place(x=0,y=155)
 
-    
     def add():
         if c.get()==0:
             e2.config(show="*")
@@ -79,7 +78,8 @@ def login_page():
     c=IntVar()
     chk=Checkbutton(text='Show Password',variable=c,command=add)
     chk.place(x=130, y=125)
-
+    
+  
     
 def reg_p():
     window.destroy()
