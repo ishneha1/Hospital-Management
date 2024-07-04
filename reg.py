@@ -3,8 +3,8 @@ from PIL import Image,ImageTk
 window = Tk()
 window.title('Patient Registration')
 
-window.minsize(height=900,width=900)
-window.maxsize(height=900,width=900)
+window.minsize(height=900,width=700)
+window.maxsize(height=900,width=700)
 
 def submitted():
     window.destroy()
@@ -63,10 +63,10 @@ r3=Radiobutton(window,text="Others",variable=var,value=3,font=20,command=gender)
 r3.place(x=0,y=440)
 
 photo2=Image.open("o4.png")
-resize_photo2=photo2.resize((500,500))
+resize_photo2=photo2.resize((400,600))
 final_image2=ImageTk.PhotoImage(resize_photo2)
 picture=Label(window, image=final_image2, width=0, height=600)
-picture.pack(side=RIGHT)
+picture.place(x=355,y=50)
 
 mainloop()
 
