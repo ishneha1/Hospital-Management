@@ -5,17 +5,19 @@ window.title('Patient Registration')
 
 window.minsize(height=900,width=700)
 window.maxsize(height=900,width=700)
-
+window.resizable(0,0)
 def submitted():
     window.destroy()
     window2=Tk()
     window2.title("Hope Hospital")
     window2.minsize(height=300,width=400)
     window2.maxsize(height=300,width=400)
-    lbl1=Label(window2, text="You have succesfully registered.", font=15)
-    lbl1.place(x=50,y=120)
-    btn1=Button(window2, text="Go To HomePage",font=("Calibri",10))
-    btn1.place(x=150,y=180)
+    # lbl1=Label(window2, text="You have succesfully registered.", font=15)
+    # lbl1.place(x=50,y=120)
+    # btn1=Button(window2, text="Go To HomePage",font=("Calibri",10))
+    # btn1.place(x=150,y=180)
+def opt():
+    text=option1.get()
 
 l=Label(window,text="Fill all the details.",font = 100)
 l.pack()
@@ -29,20 +31,35 @@ e2 = Entry(window,width=20,font=("Calibri",10))
 e2.place(x =120,y=105)
 l3= Label(window,text="Age",font=50)
 l3.place(x=0,y=150)
+options={"0-6 months",
+        "1-10 years",
+        "10-20 years",
+        "20-30 years",
+        "30-40 years",
+        "40-50 years",    
+        "50-60 years",
+        "60-70 years",
+        "70-80 years", 
+        "80-90 years",
+        "90-100 years",
+        "above 100 years"}
+option1=StringVar()
+drop=OptionMenu(window,option1, *options)
+drop.place(x=0,y=180)
 e3= Entry(window,width=20,font=("Calibri",10))
-e3.place(x=120,y=150)
+e3.place(x=120,y=205)
 l4= Label(window,text="Blood Group",font=50)
-l4.place(x=0,y=200)
+l4.place(x=0,y=250)
 e4= Entry(window,width=20,font=("Calibri",10))
-e4.place(x=120,y=205)
+e4.place(x=120,y=255)
 l5= Label(window,text="Contact",font=50)
-l5.place(x=0,y=250)
+l5.place(x=0,y=300)
 e5= Entry(window,width=20,font=("Calibri",10))
-e5.place(x=120,y=255)
+e5.place(x=120,y=305)
 l6= Label(window,text="Email",font=50)
-l6.place(x=0,y=300)
+l6.place(x=0,y=350)
 e6= Entry(window,width=20,font=("Calibri",10))
-e6.place(x=120,y=305)
+e6.place(x=120,y=355)
 b1=Button(text='Submit',font=("Calibri",12),command=submitted)
 b1.place(x=205,y=455)
 
