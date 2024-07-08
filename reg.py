@@ -36,13 +36,13 @@ def submitted():
         conn = sqlite3.connect('Patients_ho.db')
         c = conn.cursor()
         c.execute(
-            "INSERT INTO employee(first_name,last_name,Age,Blood,Contact,Email,Address,Password) VALUES(?,?,?,?,?,?,?)",
+            "INSERT INTO patients(first_name,last_name,Age,Blood,Contact,Email,Address,Password) VALUES(?,?,?,?,?,?,?,?)",
             (First_name.get(),Last_name.get(),AGE.get(),Blood_grp.get(),Cont.get(),Email.get(),Addr.get(),PASSWORD.get()),
         )
         conn.commit()
         conn.close()
         First_name.delete(0,END)
-        Last_name.delte(0,END)
+        Last_name.delete(0,END)
         AGE.delete(0,END)
         Blood_grp.delete(0,END)
         Cont.delete(0,END)
