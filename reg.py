@@ -33,7 +33,7 @@ c.execute(
          Contact INT,
          Email TEXT,
          Address TEXT,
-          Password TEXT
+         Password TEXT
          )'''
 )
 conn.commit()
@@ -51,13 +51,13 @@ def submitted():
         conn = sqlite3.connect('Patients_ho.db')
         c = conn.cursor()
         c.execute(
-            "INSERT INTO employee(first_name,last_name,Age,Blood,Contact,Email,Address,Password) VALUES(?,?,?,?,?,?,?)",
+            "INSERT INTO patients (first_name,last_name,Age,Blood,Contact,Email,Address,Password) VALUES(?,?,?,?,?,?,?,?)",
             (First_name.get(),Last_name.get(),e3.get(),e4.get(),e5.get(),e6.get(),address.get(),PASSWORD.get()),
         )
         conn.commit()
         conn.close()
         First_name.delete(0,END)
-        Last_name.delte(0,END)
+        Last_name.delete(0,END)
         e3.delete(0,END)
         e4.delete(0,END)
         e5.delete(0,END)
