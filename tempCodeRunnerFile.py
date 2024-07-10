@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+window.configure(bg='#AFEEEE')
+=======
 from tkinter import *
 from PIL import Image,ImageTk
 window = Tk()
@@ -71,3 +74,4 @@ picture.pack(side=RIGHT)
 mainloop()
 
 
+>>>>>>> cc2c65de6b6e26f58470bb3d822a57d07c8d795c
