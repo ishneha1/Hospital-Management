@@ -2,10 +2,10 @@ from tkinter import *
 from PIL import Image,ImageTk
 cover=Tk()
 cover.title("Main Page")
-cover.minsize(width=800,height=900)
-cover.maxsize(width=1000,height=1300)
-
-hospital=Label(cover,text="HOPE HOSPITAL",font=(UNDERLINE,19))
+cover.minsize(height=900,width=700)
+cover.maxsize(height=900,width=700)
+cover.resizable(0,0)
+hospital=Label(cover,text="HOPE HOSPITAL",font=("Arial Bold",10))
 hospital.pack()
 photo1=Image.open("cover.png")
 resize_photo1=photo1.resize((200,200))
@@ -18,8 +18,12 @@ def Login_page_2():
     global window
     window = Tk()
     window.title("Medical Team login")
-    window.geometry('300x200')
+    window.minsize(height=900,width=700)
+    window.maxsize(height=900,width=700)
+    window.resizable(0,0)
     window.configure(bg='#AFEEEE') # background color
+    # frame=Frame(window,text="Login",padx=100,pady=100)
+    # frame.place(x=100,y=100)
     l2 = Label(window,text="Medical Team",bg="#AFEEEE",fg='black',font=20)
     l2.place(x = 10,y=20)
     l3 = Label(window,text='USERNAME:-',bg='#AFEEEE',fg='black')
@@ -53,8 +57,12 @@ def login_page():
     global window
     window = Tk()
     window.title('Patient login')
-    window.geometry('300x200')
+    window.minsize(height=900,width=700)
+    window.maxsize(height=900,width=700)
+    window.resizable(0,0)
     window.configure(bg='#AFEEEE') # background color
+    # frame=Frame(window,text="Login",padx=100,pady=100)
+    # frame.pack(padx=100,pady=100)
     l2 = Label(window,text="For Patient",bg = '#AFEEEE',fg='black',font=20)
     l2.place(x = 10,y=20)
     l3 = Label(window,text='USER ID:-',bg='#AFEEEE',fg='black')
