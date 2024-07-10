@@ -4,11 +4,12 @@ from tkinter import messagebox
 import sqlite3
 
 window = Tk()
-window.title('Patient Registration')
+window.title('Hope Hospital')
+window.iconbitmap("icon.ico")
 
 window.minsize(height=900,width=700)
 window.maxsize(height=900,width=700)
-window.resizable(0,0)
+#window.resizable(0,0)
 def submitted():
     window.destroy()
     window2=Tk()
@@ -39,8 +40,8 @@ c.execute(
 conn.commit()
 conn.close()
 
-window.minsize(height=900,width=900)
-window.maxsize(height=900,width=900)
+window.minsize(height=900,width=700)
+window.maxsize(height=900,width=700)
 
 def submitted():
      c =PASSWORD.get()
@@ -152,7 +153,7 @@ photo2=Image.open("o4.png")
 resize_photo2=photo2.resize((400,500))
 final_image2=ImageTk.PhotoImage(resize_photo2)
 picture=Label(window, image=final_image2, width=0, height=600)
-picture.place(x=390,y=100)
+picture.place(x=390,y=40)
 
 
 mainloop()
