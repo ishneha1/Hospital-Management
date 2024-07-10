@@ -152,7 +152,7 @@ photo2=Image.open("o4.png")
 resize_photo2=photo2.resize((400,500))
 final_image2=ImageTk.PhotoImage(resize_photo2)
 picture=Label(window, image=final_image2, width=0, height=600)
-picture.place(x=390,y=20)
+picture.place(x=390,y=100)
 
 
 mainloop()
