@@ -24,6 +24,10 @@ canvas.create_image(450, 350, image=bck_end, anchor="center")
 # Function to change text color when clicked
 def change_color(event):
     canvas.itemconfig(clickable_text, fill="red")
+    new_window()
+
+def new_window():
+    new_window=Toplevel()
 
 
 # Create clickable text on the canvas with a transparent background
