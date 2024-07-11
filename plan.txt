@@ -1,0 +1,47 @@
+login page:
+for user:
+-patient id 
+-password
+-login button
+-don't have a account, sign up
+for staff:
+-staff  id 
+-password
+-login button 
+
+register page:
+for patient
+-first name
+-last name
+-age
+-gender
+-blood group
+-contact
+-
+for staff
+-first name
+-last name
+-age
+-gender
+-blood group
+-contact
+-qualification and experience 
+-department along with nmc number
+-available days and hours 
+
+home page:
+for patient
+-hospital introduction 
+-departments with their doctors along with short introduction
+-facilities 
+-listing of floor with respective department 
+-book an appointment
+-suggestions 
+
+for staff:
+-to do list
+-schedule
+-send alerts in case of emergency 
+-authority to check and update 
+
+ 
