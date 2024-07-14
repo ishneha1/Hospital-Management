@@ -116,15 +116,15 @@ frame5 = Frame(root,highlightbackground="#333",highlightthickness=1)
 frame5.place(x=650,y=280,anchor="e")
 
 #img5
-image5=Image.open('./assets/image/doctor5.jpg')
+image5=Image.open('./assets/image/doctor5.png')
 img_size=image5.resize((150,150))
 image5 = ImageTk.PhotoImage(img_size)
 
 #create a label to display the image
 image_label = Label(frame5, image=image5, justify="center")
 image_label.pack(padx=0, pady=0, anchor="e")
-doc_name=Label(frame5,text="Katrina Kaif",font=("Arial",14), justify="right")
-doc_name.pack(padx=10,pady=10,anchor="e")
+doc_name=Label(frame5,text="David Kaif",font=("Arial",14), justify="right")
+doc_name.pack(padx=10,pady=10,anchor="w")
 doc_specilist=Label(frame5,text="Gynecologist",font=("Arial",12), justify="left")
 doc_specilist.pack(padx=10,pady=0,anchor="w")
 
@@ -148,7 +148,7 @@ image6 = ImageTk.PhotoImage(img_size)
 image_label = Label(frame6, image=image6, justify="center")
 image_label.pack(padx=0, pady=0, anchor="e")
 doc_name=Label(frame6,text="Ronaldo Pun",font=("Arial",14), justify="right")
-doc_name.pack(padx=10,pady=10,anchor="e")
+doc_name.pack(padx=10,pady=10,anchor="w")
 doc_specilist=Label(frame6,text="Hematology",font=("Arial",12), justify="left")
 doc_specilist.pack(padx=10,pady=0,anchor="w")
 
