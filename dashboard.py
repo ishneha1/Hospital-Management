@@ -52,9 +52,9 @@ image2 = ImageTk.PhotoImage(img_size)
 # Create a label to display the image
 image_label = Label(frame2, image=image2, justify="center")
 image_label.pack(padx=0, pady=0, anchor="w")
-doc_name=Label(frame2,text="Manish rumba",font=("Arial",14), justify="right")
+doc_name=Label(frame2,text="Ishneha Hirachan",font=("Arial",14), justify="right")
 doc_name.pack(padx=10,pady=10,anchor="w")
-doc_specilist=Label(frame2,text="Dentist",font=("Arial",12), justify="left")
+doc_specilist=Label(frame2,text="Cardiology",font=("Arial",12), justify="left")
 doc_specilist.pack(padx=10,pady=0,anchor="w")
 
 
@@ -75,9 +75,9 @@ image3 = ImageTk.PhotoImage(img_size)
 # Create a label to display the image
 image_label = Label(frame3, image=image3, justify="center")
 image_label.pack(padx=0, pady=0, anchor="nw")
-doc_name=Label(frame3,text="Manish rumba",font=("Arial",14), justify="right")
+doc_name=Label(frame3,text="Simon Rai",font=("Arial",14), justify="right")
 doc_name.pack(padx=10,pady=10,anchor="w")
-doc_specilist=Label(frame3,text="Dentist",font=("Arial",12), justify="left")
+doc_specilist=Label(frame3,text="Neurosurgery",font=("Arial",12), justify="left")
 doc_specilist.pack(padx=10,pady=0,anchor="nw")
 
 
@@ -98,9 +98,9 @@ image4 = ImageTk.PhotoImage(img_size)
 #create a label to display the image
 image_label = Label(frame4, image=image4, justify="center")
 image_label.pack(padx=0, pady=0, anchor="nw")
-doc_name=Label(frame4,text="Manish rumba",font=("Arial",14), justify="right")
+doc_name=Label(frame4,text="Saroj Thapa",font=("Arial",14), justify="right")
 doc_name.pack(padx=10,pady=10,anchor="w")
-doc_specilist=Label(frame4,text="Dentist",font=("Arial",12), justify="left")
+doc_specilist=Label(frame4,text="Nephrology",font=("Arial",12), justify="left")
 doc_specilist.pack(padx=10,pady=0,anchor="nw")
 
 
@@ -123,9 +123,9 @@ image5 = ImageTk.PhotoImage(img_size)
 #create a label to display the image
 image_label = Label(frame5, image=image5, justify="center")
 image_label.pack(padx=0, pady=0, anchor="e")
-doc_name=Label(frame5,text="Manish rumba",font=("Arial",14), justify="right")
+doc_name=Label(frame5,text="Katrina Kaif",font=("Arial",14), justify="right")
 doc_name.pack(padx=10,pady=10,anchor="e")
-doc_specilist=Label(frame5,text="Dentist",font=("Arial",12), justify="left")
+doc_specilist=Label(frame5,text="Gynecologist",font=("Arial",12), justify="left")
 doc_specilist.pack(padx=10,pady=0,anchor="w")
 
 
@@ -147,9 +147,9 @@ image6 = ImageTk.PhotoImage(img_size)
 #create a label to display the image
 image_label = Label(frame6, image=image6, justify="center")
 image_label.pack(padx=0, pady=0, anchor="e")
-doc_name=Label(frame6,text="Manish rumba",font=("Arial",14), justify="right")
+doc_name=Label(frame6,text="Ronaldo Pun",font=("Arial",14), justify="right")
 doc_name.pack(padx=10,pady=10,anchor="e")
-doc_specilist=Label(frame6,text="Dentist",font=("Arial",12), justify="left")
+doc_specilist=Label(frame6,text="Hematology",font=("Arial",12), justify="left")
 doc_specilist.pack(padx=10,pady=0,anchor="w")
 
 
