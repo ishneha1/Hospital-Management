@@ -1,7 +1,8 @@
 from tkinter import *
 from PIL import Image,ImageTk
 root=Tk()
-root.title("Dashboard")
+root.title("Hope Hospital")
+root.iconbitmap("icon.ico")
 root.minsize(height=900,width=700)
 root.maxsize(height=900,width=700)
 root.resizable(0,0)
