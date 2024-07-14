@@ -4,11 +4,12 @@ from tkinter import messagebox
 import sqlite3
 
 window = Tk()
-window.title('Patient Registration')
+window.title('Hope Hospital')
+window.iconbitmap("icon.ico")
 
 window.minsize(height=900,width=700)
 window.maxsize(height=900,width=700)
-window.resizable(0,0)
+#window.resizable(0,0)
 def submitted():
     window.destroy()
     window2=Tk()
@@ -33,14 +34,14 @@ c.execute(
          Contact INT,
          Email TEXT,
          Address TEXT,
-          Password TEXT
+         Password TEXT
          )'''
 )
 conn.commit()
 conn.close()
 
-window.minsize(height=900,width=900)
-window.maxsize(height=900,width=900)
+window.minsize(height=900,width=700)
+window.maxsize(height=900,width=700)
 
 def submitted():
      c =PASSWORD.get()
@@ -51,13 +52,13 @@ def submitted():
         conn = sqlite3.connect('Patients_ho.db')
         c = conn.cursor()
         c.execute(
-            "INSERT INTO employee(first_name,last_name,Age,Blood,Contact,Email,Address,Password) VALUES(?,?,?,?,?,?,?)",
+            "INSERT INTO patients (first_name,last_name,Age,Blood,Contact,Email,Address,Password) VALUES(?,?,?,?,?,?,?,?)",
             (First_name.get(),Last_name.get(),e3.get(),e4.get(),e5.get(),e6.get(),address.get(),PASSWORD.get()),
         )
         conn.commit()
         conn.close()
         First_name.delete(0,END)
-        Last_name.delte(0,END)
+        Last_name.delete(0,END)
         e3.delete(0,END)
         e4.delete(0,END)
         e5.delete(0,END)
@@ -152,7 +153,7 @@ photo2=Image.open("o4.png")
 resize_photo2=photo2.resize((400,500))
 final_image2=ImageTk.PhotoImage(resize_photo2)
 picture=Label(window, image=final_image2, width=0, height=600)
-picture.place(x=390,y=20)
+picture.place(x=390,y=40)
 
 
 mainloop()
