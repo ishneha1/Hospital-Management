@@ -30,7 +30,8 @@ def change_color(event):
     new_window()
 
 def new_window():
-    new_window=Toplevel()
+    root.destroy()
+    import reg
 
 
 # Create clickable text on the canvas with a transparent background
