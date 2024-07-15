@@ -1,10 +1,11 @@
 from tkinter import *
 from PIL import Image,ImageTk
 root=Tk()
-root.title("Dashboard")
+root.title("Hope Hospital")
+root.iconbitmap("icon.ico")
 root.minsize(height=900,width=700)
 root.maxsize(height=900,width=700)
-root.resizable(0,0)
+#root.resizable(0,0)
 hospital=Label(root,text="Dashboard",font=("Arial Bold",10))
 hospital.pack()
 
@@ -15,10 +16,9 @@ doctors.pack(padx=0,pady=0,anchor="center")
 
 #NEW window
 def new_window():
-    new_window=Toplevel()
-    new_window.minsize(height=900,width=700)
-    new_window.maxsize(height=900,width=700)
-
+    root.destroy()
+    import appointment
+    
 # frame
 frame1 = Frame(root, highlightbackground="#333", highlightthickness=1)
 frame1.pack(padx=0, pady=50)
