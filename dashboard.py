@@ -21,7 +21,7 @@ def new_window():
     
 # frame
 frame1 = Frame(root, highlightbackground="#333", highlightthickness=1)
-frame1.pack(padx=0, pady=50)
+frame1.pack(padx=0, pady=50)    
 # img 1
 image = Image.open('./assets/image/doctor1.png')
 img_size=image.resize((150,150))
@@ -123,7 +123,7 @@ image5 = ImageTk.PhotoImage(img_size)
 #create a label to display the image/
 image_label = Label(frame5, image=image5, justify="center")
 image_label.pack(padx=0, pady=0, anchor="e")
-doc_name=Label(frame5,text="David Kaif",font=("Arial",14), justify="right")
+doc_name=Label(frame5,text="Katrina Kaif",font=("Arial",14), justify="right")
 doc_name.pack(padx=10,pady=10,anchor="w")
 doc_specilist=Label(frame5,text="Gynecologist",font=("Arial",12), justify="left")
 doc_specilist.pack(padx=10,pady=0,anchor="w")
