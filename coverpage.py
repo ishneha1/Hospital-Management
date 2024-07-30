@@ -43,7 +43,7 @@ window.maxsize(height=900,width=700)
     
 # Main frame
 frame1 = Frame(window, highlightbackground="#333", highlightthickness=1)
-frame1.pack(padx=20, pady=50, fill=BOTH, expand=True)
+frame1.pack(padx=00, pady=290)
 
 # User ID
 Label(frame1, text="USER ID:", fg="black").grid(row=0, column=0, sticky=W, padx=10, pady=10)
