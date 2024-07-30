@@ -31,7 +31,7 @@ def change_color(event):
 
 def new_window():
     root.destroy()
-    import reg
+    import coverpage
 
 
 # Create clickable text on the canvas with a transparent background
@@ -44,22 +44,19 @@ canvas.tag_bind(clickable_text, "<Button-1>", change_color)
 
 def register():
     root.destroy()
-    import coverpage
+    import reg
 
 #Add a button with specified text and styles
 button1 = Button(root, text="REGISTER", font=("Helvetica",10) ,fg="white", bg="red", padx=80, pady=10,command=register)
 button1.place(x=260, y=600)
 
-# def sign_in():
-#     root.destroy()
-#     import coverpage
 
 # Create text on the canvas with a transparent background
 canvas.create_text(370, 550, text="Health is Not Valued \n Until Sickness Comes",
                    font=("Helvetica", 22), fill="black", justify='center')
 
 canvas.create_text(350,672,text="Already have a account ?",font=("Helvetica",16),fill="black"
-                   ,justify="center")                            
+                 ,justify="center")                            
 
 
 

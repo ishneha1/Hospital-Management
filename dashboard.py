@@ -1,24 +1,24 @@
 from tkinter import *
 from PIL import Image,ImageTk
 root=Tk()
-root.title("Dashboard")
+root.title("Hope Hospital")
+root.iconbitmap("icon.ico")
 root.minsize(height=900,width=700)
 root.maxsize(height=900,width=700)
-root.resizable(0,0)
-hospital=Label(root,text="Dashboard",font=("Arial Bold",10))
+#root.resizable(0,0)
+hospital=Label(root,text="Hope Hospital",font=("Arial Bold",10))
 hospital.pack()
 
 # Doctor Lists
-doctors=Label(root,text="Doctors List",font=("Arial Bold",30))
+doctors=Label(root,text="Our Doctors",font=("Arial Bold",30))
 doctors.pack(padx=0,pady=0,anchor="center")
 
 
 #NEW window
 def new_window():
-    new_window=Toplevel()
-    new_window.minsize(height=900,width=700)
-    new_window.maxsize(height=900,width=700)
-
+    root.destroy()
+    import appointment
+    
 # frame
 frame1 = Frame(root, highlightbackground="#333", highlightthickness=1)
 frame1.pack(padx=0, pady=50)    
@@ -116,11 +116,11 @@ frame5 = Frame(root,highlightbackground="#333",highlightthickness=1)
 frame5.place(x=650,y=280,anchor="e")
 
 #img5
-image5=Image.open('./assets/image/doctor5.jpg')
+image5=Image.open('./assets/image/doctor5.png')
 img_size=image5.resize((150,150))
 image5 = ImageTk.PhotoImage(img_size)
 
-#create a label to display the image
+#create a label to display the image/
 image_label = Label(frame5, image=image5, justify="center")
 image_label.pack(padx=0, pady=0, anchor="e")
 doc_name=Label(frame5,text="Katrina Kaif",font=("Arial",14), justify="right")
