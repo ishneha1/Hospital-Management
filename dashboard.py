@@ -21,7 +21,7 @@ def new_window():
 
 # frame
 frame1 = Frame(root, highlightbackground="#333", highlightthickness=1)
-frame1.pack(padx=0, pady=50)
+frame1.pack(padx=0, pady=50)    
 # img 1
 image = Image.open('./assets/image/doctor1.png')
 img_size=image.resize((150,150))
