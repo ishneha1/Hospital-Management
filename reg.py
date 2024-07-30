@@ -55,15 +55,15 @@ def submitted():
         e6.delete(0,END)
         address.delete(0,END)
 
-        window.destroy()
-        window2=Tk()
-        window2.title("Hope Hospital")
-        window2.minsize(height=300,width=400)
-        window2.maxsize(height=300,width=400)
-        lbl1=Label(window2, text="You have succesfully registered.", font=15)
-        lbl1.place(x=50,y=120)
-        btn1=Button(window2, text="Go To HomePage",font=("Calibri",10))
-        btn1.place(x=150,y=180)
+        # window.destroy()
+        # window2=Tk()
+        # window2.title("Hope Hospital")
+        # window2.minsize(height=300,width=400)
+        # window2.maxsize(height=300,width=400)
+        # lbl1=Label(window2, text="You have succesfully registered.", font=15)
+        # lbl1.place(x=50,y=120)
+        # btn1=Button(window2, text="Go To HomePage",font=("Calibri",10))
+        # btn1.place(x=150,y=180)
 
 
 
