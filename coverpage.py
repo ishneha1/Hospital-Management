@@ -7,43 +7,26 @@ def reg_p():
     import reg
 
 #login page 
-
-   
 window = Tk()
 window.title('Hope Hospital')
 window.iconbitmap("icon.ico")
 window.minsize(height=900,width=700)
 window.maxsize(height=900,width=700)
-    
-# #homepage after logging in 
-# def logged_in():
-#       window.destroy()
-#       import homepage
 
-# l3 = Label(window,text='USER ID:-',fg='black')
-# l3.place(x=0,y=60)
-# e1 = Entry(window,width=20,font=("Calibri",10))
-# e1.place(x =100,y=59)
-# l4 = Label(window,text='PASSWORD :-',fg ='black')
-# l4.place(x =0,y=100)
-# e2 = Entry(window,width=20,font=("Calibri",10))
-# e2.place(x =100,y=100)
-# btn = Button(window,text='LOGIN',bg='white',command=logged_in)
-# btn.place(x=198,y=125)
-
-
-# def add():
-#     if c.get()==0:
-#             e2.config(show="*")
-#     else:
-#             e2.config(show="")
-# c=IntVar()
-# chk=Checkbutton(window,text='Show Password',variable=c,command=add)
-# chk.place(x=0, y=125)
-    
 # Main frame
 frame1 = Frame(window, highlightbackground="#333", highlightthickness=1)
-frame1.pack(padx=00, pady=290)
+frame1.pack(padx=0, pady=290)
+
+#additional frame
+frame2 = Frame(window,highlightbackground="#333",highlightthickness=1)
+frame2.pack(padx=650,pady=280)
+title=Label(frame2,text="Hope Hospital",font=("Arial Bold",12))
+title.place(x=120,y=90,anchor=E)
+logo=Image.open("icon.ico")
+logo_resize=logo.resize((60,60))
+final_logo=ImageTk.PhotoImage(logo_resize)
+logo_label=Label(frame2,image=final_logo)
+logo_label.place(x=100,y=100)
 
 # User ID
 Label(frame1, text="USER ID:", fg="black").grid(row=0, column=0, sticky=W, padx=10, pady=10)
