@@ -167,4 +167,4 @@ button6.pack(padx=10,pady=30,anchor="e")
 
 
 
-root.mainloop()
+mainloop()

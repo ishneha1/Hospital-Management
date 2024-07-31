@@ -48,7 +48,11 @@ def toggle_password():
 show_pass_var = IntVar()
 Checkbutton(frame1, text="Show Password", variable=show_pass_var, command=toggle_password).grid(row=2, column=1, sticky=W)
 
+def logged():
+     window.destroy()
+     import homepage
+     
 # Login button
-Button(frame1, text="LOGIN", bg="white").grid(row=3, column=1, pady=20)
+Button(frame1, text="LOGIN", bg="white",command=logged).grid(row=3, column=1, pady=20)
 
 mainloop()
