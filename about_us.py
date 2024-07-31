@@ -5,7 +5,7 @@ root.title("Hope Hospital")
 root.iconbitmap('icon.ico')
 root.minsize(height=900,width=700)
 root.maxsize(height=900,width=700)
-image_0 = Image.open('back.png')
+image_0 = Image.open('abs.jpeg')
 image_0 = image_0.resize((700, 900), Image.LANCZOS)
 bck_end = ImageTk.PhotoImage(image_0)
 
@@ -18,7 +18,7 @@ canvas.create_image(350, 450, image=bck_end, anchor="center")
 
 # Create a Text widget to display the paragraph
 text_widget = Text(root, wrap=WORD, width=50, height=10)
-text_widget.pack(padx=10, pady=10)
+text_widget.pack(padx=10, pady=90)
 
 
 # Define the paragraph text
