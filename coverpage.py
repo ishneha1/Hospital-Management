@@ -6,6 +6,18 @@ def reg_p():
     window.destroy()
     import reg
 
+def logged():
+     window.destroy()
+     import homepage
+
+# Show/hide password checkbox
+def toggle_password():
+        if show_pass_var.get():
+            password_entry.config(show="")
+        else:
+            password_entry.config(show="*")
+     
+
 #login page 
 window = Tk()
 window.title('Hope Hospital')
@@ -13,9 +25,21 @@ window.iconbitmap("icon.ico")
 window.minsize(height=900,width=700)
 window.maxsize(height=900,width=700)
 
+# Load the background image
+image = Image.open("coverpage.png")
+bg_image = ImageTk.PhotoImage(image)
+
+# Create a Canvas widget
+canvas = Canvas(width=700, height=900)
+canvas.pack(fill="both", expand=True)
+
+# Set the image on the Canvas
+canvas.create_image(0, 0, image=bg_image, anchor="nw")
+
+
 # Main frame
 frame1 = Frame(window, highlightbackground="#333", highlightthickness=1)
-frame1.pack(padx=0, pady=290)
+frame1_window=canvas.create_window(215, 550, anchor="nw", window=frame1)
 
 #additional frame
 frame2 = Frame(window,highlightbackground="#333",highlightthickness=1)
@@ -38,20 +62,12 @@ Label(frame1, text="PASSWORD:", fg="black").grid(row=1, column=0, sticky=W, padx
 password_entry = Entry(frame1, width=20, font=("Calibri", 12), show="*")
 password_entry.grid(row=1, column=1, padx=10, pady=10)
 
-# Show/hide password checkbox
-def toggle_password():
-        if show_pass_var.get():
-            password_entry.config(show="")
-        else:
-            password_entry.config(show="*")
+
     
 show_pass_var = IntVar()
 Checkbutton(frame1, text="Show Password", variable=show_pass_var, command=toggle_password).grid(row=2, column=1, sticky=W)
 
-def logged():
-     window.destroy()
-     import homepage
-     
+
 # Login button
 Button(frame1, text="LOGIN", bg="white",command=logged).grid(row=3, column=1, pady=20)
 
