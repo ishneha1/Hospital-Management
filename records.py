@@ -43,5 +43,11 @@ delete_box_label.place(x=180, y=630)
 delete_btn = Button(window, text="Delete Record", font=("Calibri", 12), command=delete)
 delete_btn.place(x=240, y=660)
 
+def home():
+    window.destroy()
+    import homepage
+
+back_home=Button(text="Back",command=home)
+back_home.place(x=0,y=0)
 
 mainloop()
