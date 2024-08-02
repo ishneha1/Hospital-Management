@@ -79,7 +79,8 @@ def query():
 def delete():
     conn = sqlite3.connect('hospital.db')
     c = conn.cursor()
-    c.execute("DELETE from patients WHERE oid=" + delete_box.get())
+    delete_id= delete_box.get()
+    c.execute("DELETE FROM patients WHERE oid=?", (delete_id,))
     conn.commit()
     conn.close()
     delete_box.delete(0, END)
