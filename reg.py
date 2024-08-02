@@ -143,5 +143,5 @@ final_image2 = ImageTk.PhotoImage(resize_photo2)
 picture = Label(window, image=final_image2, width=0, height=600)
 picture.place(x=390, y=40)
 
-
+print("helllooo")
 mainloop()
