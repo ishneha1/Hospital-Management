@@ -54,6 +54,7 @@ def information():
     mainloop()
 
 
+
 #for information icon
 info=Label(root,text="About us",font=("Helvetica", 20),bg="#E8FCF8")
 info.place(x=0,y=120)

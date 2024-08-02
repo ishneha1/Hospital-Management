@@ -3,11 +3,12 @@ from tkinter import messagebox
 from tkinter import ttk
 import sqlite3
 
-root = Tk()
-conn = sqlite3.connect('appointments.db')
+root=Tk()
+# Connect to the existing 'hospital.db' database
+conn = sqlite3.connect('hospital.db')
 cursor = conn.cursor()
 
-
+# Create the appointments table if it does not exist
 cursor.execute('''
         CREATE TABLE IF NOT EXISTS appointments (
             id INTEGER PRIMARY KEY,
@@ -18,11 +19,9 @@ cursor.execute('''
     ''')
 conn.commit()
 
-
 def clear_entries():
     date_entry.delete(0, END)
     patient_entry.delete(0, END)
-
 
 def book_appointment():
     doctor = doctor_var.get()
@@ -42,7 +41,6 @@ def book_appointment():
     messagebox.showinfo("Appointment Booked", f"Appointment booked with {doctor} on {date} for {patient}")
     clear_entries()
 
-
 def view_appointments():
     cursor.execute('SELECT * FROM appointments')
     appointments = cursor.fetchall()
@@ -60,7 +58,6 @@ def view_appointments():
     
     for appointment in appointments:
         appointments_listbox.insert(END, f"ID: {appointment[0]} | Doctor: {appointment[1]} | Date: {appointment[2]} | Patient: {appointment[3]}")
-
 
 root.title("Doctor Appointment Booking System")
 root.geometry("400x400")
@@ -95,10 +92,6 @@ submit_button.pack(pady=10)
 view_button = Button(root, text="View Appointments", command=view_appointments)
 view_button.pack(pady=10)
 
-
-
-
 root.mainloop()
-
 
 conn.close()
