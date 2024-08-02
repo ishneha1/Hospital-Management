@@ -16,7 +16,7 @@ doctors.pack(padx=0,pady=0,anchor="center")
 
 # frame
 frame1 = Frame(root, highlightbackground="#333", highlightthickness=1)
-frame1.pack(padx=0, pady=50)    
+frame1.place(x=252,y=125) 
 # img 1
 image = Image.open('doctor1.png')
 img_size=image.resize((150,150))
@@ -34,7 +34,7 @@ doc_specilist.pack(padx=10,pady=0,anchor="w")
 
 #fame2
 frame2 = Frame(root, highlightbackground="#333", highlightthickness=1)
-frame2.place(x=272,y=450)
+frame2.place(x=252,y=450)
 
 
 # img 2
@@ -46,7 +46,7 @@ image2 = ImageTk.PhotoImage(img_size)
 image_label = Label(frame2, image=image2, justify="center")
 image_label.pack(padx=0, pady=0, anchor="w")
 doc_name=Label(frame2,text="Ishneha Hirachan",font=("Arial",14), justify="right")
-doc_name.pack(padx=10,pady=10,anchor="w")
+doc_name.pack(padx=0,pady=10,anchor="w")
 doc_specilist=Label(frame2,text="Cardiology",font=("Arial",12), justify="left")
 doc_specilist.pack(padx=10,pady=0,anchor="w")
 
