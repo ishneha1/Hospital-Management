@@ -34,7 +34,7 @@ doc_specilist.pack(padx=10,pady=0,anchor="w")
 
 #fame2
 frame2 = Frame(root, highlightbackground="#333", highlightthickness=1)
-frame2.place(x=252,y=450)
+frame2.place(x=252,y=445)
 
 
 # img 2
@@ -72,7 +72,7 @@ doc_specilist.pack(padx=10,pady=0,anchor="nw")
 #frame4
 
 frame4 = Frame(root,highlightbackground="#333",highlightthickness=1)
-frame4.place(x=10,y=605,anchor="w")
+frame4.place(x=10,y=560,anchor="w")
 
 #img4
 image4=Image.open('doctor4.png')
@@ -91,7 +91,7 @@ doc_specilist.pack(padx=10,pady=0,anchor="nw")
 #frame5
 
 frame5 = Frame(root,highlightbackground="#333",highlightthickness=1)
-frame5.place(x=650,y=280,anchor="e")
+frame5.place(x=650,y=240,anchor="e")
 
 #img5
 image5=Image.open('doctor5.png')
@@ -109,7 +109,7 @@ doc_specilist.pack(padx=10,pady=0,anchor="w")
 #frame6
 
 frame6 = Frame(root,highlightbackground="#333",highlightthickness=1)
-frame6.place(x=650,y=605,anchor="e")
+frame6.place(x=650,y=560,anchor="e")
 
 #img6
 image6=Image.open('doctor6.png')
