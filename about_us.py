@@ -31,4 +31,6 @@ Experience a new level of efficiency and care with our innovative solution."""
 # Add the paragraph text to the Canvas
 canvas.create_text(370, 350, text=paragraph, fill="black", font=("Arial", 16), width=500,state=DISABLED)
 
+
+
 mainloop()

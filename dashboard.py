@@ -14,15 +14,6 @@ doctors=Label(root,text="Our Doctors",font=("Arial Bold",30))
 doctors.pack(padx=0,pady=0,anchor="center")
 
 
-#NEW window
-def new_window():
-    root.destroy()
-    import appointment
-
-
-button=Button(text="Make an Appointment", command=new_window)
-button.place(x=285,y=100)
-
 # frame
 frame1 = Frame(root, highlightbackground="#333", highlightthickness=1)
 frame1.pack(padx=0, pady=50)    
@@ -132,5 +123,12 @@ doc_name=Label(frame6,text="Ronaldo Pun",font=("Arial",14), justify="right")
 doc_name.pack(padx=10,pady=10,anchor="w")
 doc_specilist=Label(frame6,text="Hematology",font=("Arial",12), justify="left")
 doc_specilist.pack(padx=10,pady=0,anchor="w")
+
+def home():
+    root.destroy()
+    import homepage
+
+back_home=Button(text="Back",command=home)
+back_home.place(x=0,y=0)
 
 mainloop()
