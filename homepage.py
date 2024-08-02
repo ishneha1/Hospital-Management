@@ -71,13 +71,35 @@ def doc():
 
 #for doctors
 doctor=Label(root,text="Our Doctors",font=("Helvetica", 20),bg="#E8FCF8")
-doctor.place(x=250,y=120)
+doctor.place(x=200,y=120)
 doctor_pic=Image.open("doc.ico")
 resize_doc_pic=doctor_pic.resize((40,60))
 final_doc_image=ImageTk.PhotoImage(resize_doc_pic)
 doc_icon=Button(root,image=final_doc_image,width=0,height=0,command=doc)
-doc_icon.place(x=300,y=50)
+doc_icon.place(x=250,y=50)
 
+def detail():
+    root.destroy()
+    import records
+    
+details=Label(root,text="Your details",font=("Helvetica", 20),bg="#E8FCF8")
+details.place(x=450,y=120)
+details_pic=Image.open("records.ico")
+resize_info_pic=details_pic.resize((40,60))
+final_detail_image=ImageTk.PhotoImage(resize_info_pic)
+detail_icon=Button(root,image=final_detail_image,width=0,height=0,command=detail)
+detail_icon.place(x=500,y=50)
 
+def appointment_page():
+    root.destroy()
+    import appointment
+
+appointment=Label(root,text="Appointment",font=("Helvetica", 20),bg="#E8FCF8")
+appointment.place(x=0,y=270)
+appointment_pic=Image.open("appointment.ico")
+resize_appointment_pic=appointment_pic.resize((40,60))
+final_appointment_image=ImageTk.PhotoImage(resize_appointment_pic)
+detail_icon=Button(root,image=final_appointment_image,width=0,height=0,command=appointment_page)
+detail_icon.place(x=50,y=200)
 
 mainloop()

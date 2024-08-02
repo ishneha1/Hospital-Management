@@ -27,7 +27,7 @@ button.place(x=285,y=100)
 frame1 = Frame(root, highlightbackground="#333", highlightthickness=1)
 frame1.pack(padx=0, pady=50)    
 # img 1
-image = Image.open('./assets/image/doctor1.png')
+image = Image.open('doctor1.png')
 img_size=image.resize((150,150))
 image = ImageTk.PhotoImage(img_size)
 
@@ -47,7 +47,7 @@ frame2.place(x=272,y=450)
 
 
 # img 2
-image2 = Image.open('./assets/image/doctor2.jpg')
+image2 = Image.open('doctor2.jpg')
 img_size=image2.resize((150,150))
 image2 = ImageTk.PhotoImage(img_size)
  
@@ -65,7 +65,7 @@ frame3 = Frame(root, highlightbackground="#333", highlightthickness=1)
 frame3.place(x=10, y=125, anchor="nw")
 
 # img 3
-image3 = Image.open('./assets/image/doctor3.png')
+image3 = Image.open('doctor3.png')
 img_size=image3.resize((150,150))
 image3 = ImageTk.PhotoImage(img_size)
 
@@ -84,7 +84,7 @@ frame4 = Frame(root,highlightbackground="#333",highlightthickness=1)
 frame4.place(x=10,y=605,anchor="w")
 
 #img4
-image4=Image.open('./assets/image/doctor4.png')
+image4=Image.open('doctor4.png')
 img_size=image4.resize((150,150))
 image4 = ImageTk.PhotoImage(img_size)
 
@@ -103,7 +103,7 @@ frame5 = Frame(root,highlightbackground="#333",highlightthickness=1)
 frame5.place(x=650,y=280,anchor="e")
 
 #img5
-image5=Image.open('./assets/image/doctor5.png')
+image5=Image.open('doctor5.png')
 img_size=image5.resize((150,150))
 image5 = ImageTk.PhotoImage(img_size)
 
@@ -121,7 +121,7 @@ frame6 = Frame(root,highlightbackground="#333",highlightthickness=1)
 frame6.place(x=650,y=605,anchor="e")
 
 #img6
-image6=Image.open('./assets/image/doctor6.png')
+image6=Image.open('doctor6.png')
 img_size=image6.resize((150,150))
 image6 = ImageTk.PhotoImage(img_size)
 

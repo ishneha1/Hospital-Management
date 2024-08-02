@@ -53,7 +53,7 @@ logo_label=Label(frame2,image=final_logo)
 logo_label.place(x=100,y=100)
 
 # User ID
-Label(frame1, text="USER ID:", fg="black").grid(row=0, column=0, sticky=W, padx=10, pady=10)
+Label(frame1, text="FULL NAME:", fg="black").grid(row=0, column=0, sticky=W, padx=10, pady=10)
 user_id_entry = Entry(frame1, width=20, font=("Calibri", 12))
 user_id_entry.grid(row=0, column=1, padx=10, pady=10)
 
