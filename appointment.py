@@ -59,8 +59,11 @@ def view_appointments():
     for appointment in appointments:
         appointments_listbox.insert(END, f"ID: {appointment[0]} | Doctor: {appointment[1]} | Date: {appointment[2]} | Patient: {appointment[3]}")
 
-root.title("Doctor Appointment Booking System")
-root.geometry("400x400")
+root.title("Hope Hospital")
+root.iconbitmap("icon.ico")
+
+root.minsize(height=400,width=400)
+root.maxsize(height=400,width=400)
 
 label_heading = Label(root, text="Book an Appointment", font=("Arial", 16))
 label_heading.pack(pady=10)
