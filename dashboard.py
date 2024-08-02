@@ -18,7 +18,11 @@ doctors.pack(padx=0,pady=0,anchor="center")
 def new_window():
     root.destroy()
     import appointment
-    
+
+
+button=Button(text="Make an Appointment", command=new_window)
+button.place(x=285,y=100)
+
 # frame
 frame1 = Frame(root, highlightbackground="#333", highlightthickness=1)
 frame1.pack(padx=0, pady=50)    
@@ -36,8 +40,6 @@ doc_specilist=Label(frame1,text="Dentist",font=("Arial",12), justify="left")
 doc_specilist.pack(padx=10,pady=0,anchor="w")
 
 
-button1=Button(frame1,text="Make an Appointment", justify="left",command=new_window)
-button1.pack(padx=10,pady=30,anchor="w")
 
 #fame2
 frame2 = Frame(root, highlightbackground="#333", highlightthickness=1)
@@ -58,11 +60,6 @@ doc_specilist=Label(frame2,text="Cardiology",font=("Arial",12), justify="left")
 doc_specilist.pack(padx=10,pady=0,anchor="w")
 
 
-button2=Button(frame2,text="Make an Appointment", justify="left",command=new_window)
-button2.pack(padx=10,pady=30,anchor="w")
-
-
-
 #frame3
 frame3 = Frame(root, highlightbackground="#333", highlightthickness=1)
 frame3.place(x=10, y=125, anchor="nw")
@@ -79,10 +76,6 @@ doc_name=Label(frame3,text="Simon Rai",font=("Arial",14), justify="right")
 doc_name.pack(padx=10,pady=10,anchor="w")
 doc_specilist=Label(frame3,text="Neurosurgery",font=("Arial",12), justify="left")
 doc_specilist.pack(padx=10,pady=0,anchor="nw")
-
-
-button3=Button(frame3,text="Make an Appointment", justify="left",command=new_window)
-button3.pack(padx=10,pady=30,anchor="nw")
 
 
 #frame4
@@ -104,12 +97,6 @@ doc_specilist=Label(frame4,text="Nephrology",font=("Arial",12), justify="left")
 doc_specilist.pack(padx=10,pady=0,anchor="nw")
 
 
-button4=Button(frame4,text="Make an Appointment", justify="left",command=new_window)
-button4.pack(padx=10,pady=30,anchor="nw")
-
-
-
-
 #frame5
 
 frame5 = Frame(root,highlightbackground="#333",highlightthickness=1)
@@ -128,12 +115,6 @@ doc_name.pack(padx=10,pady=10,anchor="w")
 doc_specilist=Label(frame5,text="Gynecologist",font=("Arial",12), justify="left")
 doc_specilist.pack(padx=10,pady=0,anchor="w")
 
-
-button5=Button(frame5,text="Make an Appointment", justify="left",command=new_window)
-button5.pack(padx=10,pady=30,anchor="e")
-
-
-
 #frame6
 
 frame6 = Frame(root,highlightbackground="#333",highlightthickness=1)
@@ -151,20 +132,5 @@ doc_name=Label(frame6,text="Ronaldo Pun",font=("Arial",14), justify="right")
 doc_name.pack(padx=10,pady=10,anchor="w")
 doc_specilist=Label(frame6,text="Hematology",font=("Arial",12), justify="left")
 doc_specilist.pack(padx=10,pady=0,anchor="w")
-
-
-
-button6=Button(frame6,text="Make an Appointment", justify="left",command=new_window)
-button6.pack(padx=10,pady=30,anchor="e")
-
-
-
-
-
-
-   
-
-
-
 
 mainloop()
