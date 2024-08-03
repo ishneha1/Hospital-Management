@@ -32,6 +32,25 @@ def delete():
     delete_box.delete(0, END)
     messagebox.showinfo("Success", "Record Deleted Successfully")
 
+def update(first_name, last_name, age, address, blood_group, contact, email, password):
+    # Connect to the database
+    conn = sqlite3.connect('hospital.db')
+    cursor = conn.cursor()
+
+    # Update the record
+    update_query = """
+    UPDATE patients
+    SET first_name = ?, last_name = ?, age = ?, address = ?, blood_group = ?, contact = ?, email = ?, password = ?
+    """
+    cursor.execute(update_query, (first_name, last_name, age, address, blood_group, contact, email, password))
+
+    # Commit the changes and close the connection
+    conn.commit()
+    conn.close()
+
+    print(f"Patient record has been updated successfully.")
+
+
 query_btn = Button(text="Show Records", font=("Calibri", 12), command=query)
 query_btn.place(x=180, y=575)
 
@@ -42,6 +61,9 @@ delete_box_label.place(x=180, y=630)
 
 delete_btn = Button(window, text="Delete Record", font=("Calibri", 12), command=delete)
 delete_btn.place(x=240, y=660)
+
+update_btn = Button(window, text="Update Record", font=("Calibri", 12), command=update)
+update_btn.place(x=240, y=500)
 
 def home():
     window.destroy()

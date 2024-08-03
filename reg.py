@@ -59,6 +59,8 @@ def submitted():
     password.delete(0, END)
     confirm_password.delete(0, END)
     messagebox.showinfo("Success", "Record Added Successfully")
+    window.destroy()
+    import homepage 
 
 
 
