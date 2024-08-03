@@ -65,17 +65,17 @@ motto.place(x=1,y=25)
 titlee=Label(text="Hope Hospital",font=("Helvetica", 23),bg="#E8FCF8",justify="center")
 titlee.place(x=250,y=80)
 features=Label(text="Our Services:",font=("Helvetica", 20),bg="#E8FCF8",justify="center")
-features.place(x=200,y=150)
+features.place(x=200,y=200)
 
 
 #for information icon
 info=Label(root,text="About us",font=("Helvetica", 20),bg="#E8FCF8")
-info.place(x=200,y=270)
+info.place(x=200,y=340)
 info_pic=Image.open("home.ico")
 resize_info_pic=info_pic.resize((40,60))
 final_info_image=ImageTk.PhotoImage(resize_info_pic)
 info_icon=Button(root, image=final_info_image, width=0, height=0,command=information)
-info_icon.place(x=230,y=200)
+info_icon.place(x=230,y=270)
 
 #import dashboard
 def doc():
@@ -84,35 +84,35 @@ def doc():
 
 #for doctors
 doctor=Label(root,text="Our Doctors",font=("Helvetica", 20),bg="#E8FCF8")
-doctor.place(x=450,y=270)
+doctor.place(x=450,y=340)
 doctor_pic=Image.open("doc.ico")
 resize_doc_pic=doctor_pic.resize((40,60))
 final_doc_image=ImageTk.PhotoImage(resize_doc_pic)
 doc_icon=Button(root,image=final_doc_image,width=0,height=0,command=doc)
-doc_icon.place(x=500,y=200)
+doc_icon.place(x=500,y=270)
 
 def detail():
     root.destroy()
     import records
     
 details=Label(root,text="Your details",font=("Helvetica", 20),bg="#E8FCF8")
-details.place(x=200,y=410)
+details.place(x=200,y=480)
 details_pic=Image.open("records.ico")
 resize_info_pic=details_pic.resize((40,60))
 final_detail_image=ImageTk.PhotoImage(resize_info_pic)
 detail_icon=Button(root,image=final_detail_image,width=0,height=0,command=detail)
-detail_icon.place(x=230,y=340)
+detail_icon.place(x=230,y=410)
 
 def appointment_page():
     root.destroy()
     import appointment
 
 appointment=Label(root,text="Appointment",font=("Helvetica", 20),bg="#E8FCF8")
-appointment.place(x=450,y=410)
+appointment.place(x=450,y=480)
 appointment_pic=Image.open("appointment.ico")
 resize_appointment_pic=appointment_pic.resize((40,60))
 final_appointment_image=ImageTk.PhotoImage(resize_appointment_pic)
 detail_icon=Button(root,image=final_appointment_image,width=0,height=0,command=appointment_page)
-detail_icon.place(x=500,y=340)
+detail_icon.place(x=500,y=410)
 
 mainloop()
