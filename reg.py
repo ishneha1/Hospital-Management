@@ -6,8 +6,7 @@ import sqlite3
 window = Tk()
 window.title("Hope Hospital")
 window.iconbitmap("icon.ico")
-window.minsize(height=900, width=700)
-window.maxsize(height=900, width=700)
+
 window.geometry("700x900+300+0")
 window.resizable(False,False)
 
