@@ -5,7 +5,7 @@ import sqlite3
 
 window = Tk()
 window.title("Hope Hospital")
-# window.iconbitmap("icon.ico")
+window.iconbitmap("icon.ico")
 window.minsize(height=900, width=700)
 window.maxsize(height=900, width=700)
 
@@ -30,38 +30,42 @@ conn.close()
 
 
 def submitted():
-    conn = sqlite3.connect("hospital.db")
-    c = conn.cursor()
-    c.execute(
-        "INSERT INTO patients VALUES (:first, :last, :age, :address, :blood, :contact, :email, :password, :confirm, :gender)",
-        {
-            "first": f_name.get(),
-            "last": l_name.get(),
-            "age": age.get(),
-            "address": address.get(),
-            "blood": blood_group.get(),
-            "contact": contact.get(),
-            "email": email.get(),
-            "password": password.get(),
-            "confirm": confirm_password.get(),
-            "gender": selected_option.get()
-        }
-    )
-    conn.commit()
-    conn.close()
+    first_name = f_name.get()
+    last_name = l_name.get()
+    age = entry_age.get()
+    address = entry_address.get()
+    blood_group = entry_blood_group.get()
+    contact = entry_contact.get()
+    email = entry_email.get()
+    password = entry_password.get()
+    if not all([first_name, last_name, age, address, blood_group, contact, email, password]):
+        messagebox.showwarning("Warning", "Please fill in all the fields.")
+    else:
+        conn = sqlite3.connect('hospital.db')
+        cursor = conn.cursor()
+
+        cursor.execute('''
+            INSERT INTO patients (first_name, last_name, age, address, blood_group, contact, email, password)
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+        ''', (first_name, last_name, age, address, blood_group, contact, email, password))
+
+        conn.commit()
+        conn.close()
+
+        messagebox.showinfo("Success", "Record Added Successfully")
+        window.destroy()
+        import homepage
+
+    
     f_name.delete(0, END)
     l_name.delete(0, END)
-    age.delete(0, END)
-    address.delete(0, END)
-    blood_group.delete(0, END)
-    contact.delete(0, END)
-    email.delete(0, END)
-    password.delete(0, END)
-    confirm_password.delete(0, END)
-    messagebox.showinfo("Success", "Record Added Successfully")
-    window.destroy()
-    import homepage
-
+    entry_age.delete(0, END)
+    entry_address.delete(0, END)
+    entry_blood_group.delete(0, END)
+    entry_contact.delete(0, END)
+    entry_email.delete(0, END)
+    entry_password.delete(0, END)
+    
 
 
 
@@ -77,41 +81,41 @@ l_name = Entry(window, width=25, font=("Calibri", 10))
 l_name.place(x=180, y=105)
 age_label = Label(window, text="Age", font=50)
 age_label.place(x=0, y=150)
-age = Entry(window, width=25, font=("Calibri", 10))
-age.place(x=180, y=150)
+entry_age = Entry(window, width=25, font=("Calibri", 10))
+entry_age.place(x=180, y=150)
 adress_label = Label(window, text="Address", font=50)
 adress_label.place(x=0, y=200)
-address = Entry(window, width=25, font=("Calibri", 10))
-address.place(x=180, y=200)
+entry_address = Entry(window, width=25, font=("Calibri", 10))
+entry_address.place(x=180, y=200)
 blood_group_label = Label(window, text="Blood Group", font=50)
 blood_group_label.place(x=0, y=250)
-blood_group = Entry(window, width=25, font=("Calibri", 10))
-blood_group.place(x=180, y=255)
+entry_blood_group = Entry(window, width=25, font=("Calibri", 10))
+entry_blood_group.place(x=180, y=255)
 contact_label = Label(window, text="Contact", font=50)
 contact_label.place(x=0, y=300)
-contact = Entry(window, width=25, font=("Calibri", 10))
-contact.place(x=180, y=305)
+entry_contact = Entry(window, width=25, font=("Calibri", 10))
+entry_contact.place(x=180, y=305)
 email_label = Label(window, text="Email", font=50)
 email_label.place(x=0, y=350)
-email = Entry(window, width=25, font=("Calibri", 10))
-email.place(x=180, y=355)
+entry_email = Entry(window, width=25, font=("Calibri", 10))
+entry_email.place(x=180, y=355)
 submit_button = Button(text="Submit", font=("Calibri", 12), command=submitted)
 submit_button.place(x=330, y=630)
 
 
 password_label = Label(window, text="Password", font=50)
 password_label.place(x=0, y=400)
-password = Entry(window, width=25, font=("Calibri", 10),show='*')
-password.place(x=180, y=402)
+entry_password = Entry(window, width=25, font=("Calibri", 10),show='*')
+entry_password.place(x=180, y=402)
 confirm_password_label = Label(window, text="Confrim Password", font=20)
 confirm_password_label.place(x=0, y=460)
 confirm_password = Entry(window, width=25, font=("Calibri", 10),show='*')
 confirm_password.place(x=180, y=460)
 def toggle_password():
         if show_pass_var.get():
-            password.config(show="")
+            entry_password.config(show="")
         else:
-            password.config(show="*")
+            entry_password.config(show="*")
         if show_pass_var.get():
             confirm_password.config(show="")
         else:
