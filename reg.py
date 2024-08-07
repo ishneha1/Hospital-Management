@@ -13,6 +13,7 @@ conn = sqlite3.connect("hospital.db")
 c = conn.cursor()
 c.execute(
     """CREATE TABLE IF NOT EXISTS patients (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
             first_name text,
             last_name text,
             age integer,
@@ -38,16 +39,18 @@ def submitted():
     contact = entry_contact.get()
     email = entry_email.get()
     password = entry_password.get()
-    if not all([first_name, last_name, age, address, blood_group, contact, email, password]):
+    confirm_password= entry_confirm_password.get()
+    gender= selected_option.get()
+    if not all([first_name, last_name, age, address, blood_group, contact, email, password, confirm_password, gender]):
         messagebox.showwarning("Warning", "Please fill in all the fields.")
     else:
         conn = sqlite3.connect('hospital.db')
         cursor = conn.cursor()
 
         cursor.execute('''
-            INSERT INTO patients (first_name, last_name, age, address, blood_group, contact, email, password)
-            VALUES (?, ?, ?, ?, ?, ?, ?, ?)
-        ''', (first_name, last_name, age, address, blood_group, contact, email, password))
+            INSERT INTO patients (first_name, last_name, age, address, blood_group, contact, email, password, confirm_password, gender)
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+        ''', (first_name, last_name, age, address, blood_group, contact, email, password, confirm_password, gender))
 
         conn.commit()
         conn.close()
@@ -109,17 +112,17 @@ entry_password = Entry(window, width=25, font=("Calibri", 10),show='*')
 entry_password.place(x=180, y=402)
 confirm_password_label = Label(window, text="Confrim Password", font=20)
 confirm_password_label.place(x=0, y=460)
-confirm_password = Entry(window, width=25, font=("Calibri", 10),show='*')
-confirm_password.place(x=180, y=460)
+entry_confirm_password = Entry(window, width=25, font=("Calibri", 10),show='*')
+entry_confirm_password.place(x=180, y=460)
 def toggle_password():
         if show_pass_var.get():
             entry_password.config(show="")
         else:
             entry_password.config(show="*")
         if show_pass_var.get():
-            confirm_password.config(show="")
+            entry_confirm_password.config(show="")
         else:
-            confirm_password.config(show="*")
+            entry_confirm_password.config(show="*")
     
 show_pass_var = IntVar()
 Checkbutton(text="Show Password", variable=show_pass_var, command=toggle_password).place(x=270, y=500)
