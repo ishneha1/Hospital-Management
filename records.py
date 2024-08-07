@@ -32,6 +32,9 @@ def delete():
     delete_box.delete(0, END)
     messagebox.showinfo("Success", "Record Deleted Successfully")
 
+
+
+
 query_btn = Button(text="Show Records", font=("Calibri", 12), command=query)
 query_btn.place(x=180, y=575)
 
@@ -42,6 +45,7 @@ delete_box_label.place(x=180, y=630)
 
 delete_btn = Button(window, text="Delete Record", font=("Calibri", 12), command=delete)
 delete_btn.place(x=240, y=660)
+
 
 def home():
     window.destroy()
