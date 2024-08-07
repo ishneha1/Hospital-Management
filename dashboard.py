@@ -3,9 +3,8 @@ from PIL import Image,ImageTk
 root=Tk()
 root.title("Hope Hospital")
 root.iconbitmap("icon.ico")
-root.minsize(height=900,width=700)
-root.maxsize(height=900,width=700)
-#root.resizable(0,0)
+root.geometry("700x900+300+0")
+root.resizable(False,False)
 hospital=Label(root,text="Hope Hospital",font=("Arial Bold",10))
 hospital.pack()
 
