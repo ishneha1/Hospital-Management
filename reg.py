@@ -6,12 +6,11 @@ import sqlite3
 window = Tk()
 window.title("Hope Hospital")
 window.iconbitmap("icon.ico")
+window.minsize(height=900, width=700)
+window.maxsize(height=900, width=700)
 window.geometry("700x900+300+0")
 window.resizable(False,False)
 
-window.iconbitmap("icon.ico")
-window.minsize(height=900, width=700)
-window.maxsize(height=900, width=700)
 
 conn = sqlite3.connect("hospital.db")
 c = conn.cursor()
@@ -73,17 +72,6 @@ def submitted():
     entry_email.delete(0, END)
     entry_password.delete(0, END)
     
-    age.delete(0, END)
-    address.delete(0, END)
-    blood_group.delete(0, END)
-    contact.delete(0, END)
-    email.delete(0, END)
-    password.delete(0, END)
-    confirm_password.delete(0, END)
-    messagebox.showinfo("Success", "Record Added Successfully")
-    window.destroy()
-    import homepage
-
 
 
 
