@@ -12,9 +12,8 @@ image_0 = image_0.resize((700, 900), Image.LANCZOS)
 bck_end = ImageTk.PhotoImage(image_0)
 
 # Set window geometry
-root.minsize(height=900,width=700)
-root.maxsize(height=900,width=700)
-#root.resizable(0,0)
+root.geometry("700x900+300+0")
+root.resizable(False,False)
 
 # Create a canvas to hold the background image and the text
 canvas = Canvas(root, width=200, height=800)

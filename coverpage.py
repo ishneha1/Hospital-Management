@@ -1,15 +1,29 @@
 from tkinter import *
 from PIL import Image,ImageTk
+import sqlite3
+from tkinter import messagebox
 
-#importing reg page 
-def reg_p():
-    window.destroy()
-    import reg
 
 def logged():
-     window.destroy()
-     import homepage
+     def authenticate_user(username, password):
+        conn = sqlite3.connect('hospital.db')
+        c = conn.cursor()
+        c.execute('SELECT * FROM patients WHERE first_name = ? AND password = ?', (username, password))
+        user = c.fetchone()
+        conn.close()
+        return user
 
+     def login():
+        username = user_id_entry.get()
+        password = password_entry.get()
+        user = authenticate_user(username, password)
+        if user:
+            window.destroy()
+            import homepage
+        else:
+            messagebox.showerror("Error", "Invalid credentials")
+  
+     login()
 # Show/hide password checkbox
 def toggle_password():
         if show_pass_var.get():
@@ -22,8 +36,8 @@ def toggle_password():
 window = Tk()
 window.title('Hope Hospital')
 window.iconbitmap("icon.ico")
-window.minsize(height=900,width=700)
-window.maxsize(height=900,width=700)
+window.geometry("700x900+300+0")
+window.resizable(False,False)
 
 # Load the background image
 image = Image.open("coverpage.png")
@@ -70,5 +84,6 @@ Checkbutton(frame1, text="Show Password", variable=show_pass_var, command=toggle
 
 # Login button
 Button(frame1, text="LOGIN", bg="white",command=logged).grid(row=3, column=1, pady=20)
+
 
 mainloop()

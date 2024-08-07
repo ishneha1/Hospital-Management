@@ -5,9 +5,10 @@ import sqlite3
 
 window = Tk()
 window.title("Hope Hospital")
-# window.iconbitmap("icon.ico")
-window.minsize(height=900, width=700)
-window.maxsize(height=900, width=700)
+window.iconbitmap("icon.ico")
+window.geometry("700x900+300+0")
+window.resizable(False,False)
+
 
 conn = sqlite3.connect("hospital.db")
 c = conn.cursor()
@@ -59,6 +60,8 @@ def submitted():
     password.delete(0, END)
     confirm_password.delete(0, END)
     messagebox.showinfo("Success", "Record Added Successfully")
+    window.destroy()
+    import homepage
 
 
 
