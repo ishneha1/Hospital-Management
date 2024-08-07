@@ -4,11 +4,14 @@ from tkinter import ttk
 import sqlite3
 
 root=Tk()
-# Connect to the existing 'hospital.db' database
+root.geometry("700x900+300+0")
+root.resizable(False,False)
+
+
 conn = sqlite3.connect('hospital.db')
 cursor = conn.cursor()
 
-# Create the appointments table if it does not exist
+
 cursor.execute('''
         CREATE TABLE IF NOT EXISTS appointments (
             id INTEGER PRIMARY KEY,
@@ -66,7 +69,7 @@ root.geometry("700x900+300+0")
 root.resizable(False,False)
 
 label_heading = Label(root, text="Book an Appointment", font=("Arial", 20))
-label_heading.place(x=250,y=100)
+label_heading.place(x=220,y=100)
 
 label_doctor = Label(root, text="Select Doctor:")
 label_doctor.place(x=310,y=150)
@@ -75,7 +78,7 @@ doctors = ['Dr. Manish Rumba', 'Dr. Saroj Thapa', 'Dr. Katrina Kaif', 'Dr. Ishne
 doctor_var = StringVar(root)
 doctor_var.set(doctors[0])  
 doctor_menu = ttk.Combobox(root, textvariable=doctor_var, values=doctors, state='readonly')
-doctor_menu.place(x=280,y=170)
+doctor_menu.place(x=285,y=170)
 
 label_date = Label(root, text="Select Date (YYYY-MM-DD):")
 label_date.place(x=280,y=200)

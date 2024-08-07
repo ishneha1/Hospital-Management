@@ -5,6 +5,9 @@ from PIL import ImageTk, Image
 root = Tk()
 root.title("Hope Hospital")
 root.iconbitmap("icon.ico")
+root.geometry("700x900+300+0")
+root.resizable(False,False)
+
 
 # Open and resize the image
 image_0 = Image.open('hospitalpage1.jpg')
