@@ -9,10 +9,6 @@ window.iconbitmap("icon.ico")
 window.geometry("700x900+300+0")
 window.resizable(False,False)
 
-window.iconbitmap("icon.ico")
-window.minsize(height=900, width=700)
-window.maxsize(height=900, width=700)
-
 conn = sqlite3.connect("hospital.db")
 c = conn.cursor()
 c.execute(
