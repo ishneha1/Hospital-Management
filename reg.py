@@ -59,7 +59,7 @@ def submitted():
 
         messagebox.showinfo("Success", "Record Added Successfully")
         window.destroy()
-        import homepage
+        import coverpage
 
     
     f_name.delete(0, END)
