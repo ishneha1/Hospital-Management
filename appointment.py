@@ -98,12 +98,7 @@ submit_button.place(x=300,y=310)
 view_button = Button(root, text="View Appointments", command=view_appointments)
 view_button.place(x=300,y=350)
 
-def home():
-    root.destroy()
-    import homepage
 
-back_home=Button(text="Back",command=home)
-back_home.place(x=0,y=0)
 
 root.mainloop()
 
