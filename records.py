@@ -72,7 +72,6 @@ def update_record():
     else:
         messagebox.showwarning("Warning", "Please enter an ID to update.")
 
-# Function to delete a record by ID
 def delete_record():
     record_id = entry_id.get()
 
@@ -142,7 +141,6 @@ entry_email.grid(row=7, column=1, padx=10, pady=10)
 update_button = Button(root, text="Update Record", command=update_record)
 update_button.grid(row=8, column=1, pady=20)
 
-# Button to delete the record
 delete_button = Button(root, text="Delete Record", command=delete_record)
 delete_button.grid(row=8, column=2, pady=20)
 
