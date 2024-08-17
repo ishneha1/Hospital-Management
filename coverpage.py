@@ -4,8 +4,27 @@ import sqlite3
 from tkinter import messagebox
 
 def logged():
-    window.destroy()
-    import homepage
+    username = user_id_entry.get()
+    password = password_entry.get()
+
+    # Connect to the database
+    conn = sqlite3.connect('hospital.db')
+    cursor = conn.cursor()
+
+    # Query the database to check for the entered username and password
+    cursor.execute('SELECT * FROM patients WHERE email = ? AND password = ?', (username, password))
+    result = cursor.fetchone()
+
+    if result:
+        messagebox.showinfo("Login Successful", "Welcome, you have successfully logged in!")
+        window.destroy()
+        import homepage
+    else:
+        messagebox.showerror("Login Failed", "Invalid username or password")
+
+    # Close the connection
+    conn.close()
+    
   
 # Show/hide password checkbox
 def toggle_password():
@@ -50,7 +69,7 @@ logo_label=Label(frame2,image=final_logo)
 logo_label.place(x=100,y=100)
 
 # User ID
-Label(frame1, text="FULL NAME:", fg="black").grid(row=0, column=0, sticky=W, padx=10, pady=10)
+Label(frame1, text="E-MAIL:", fg="black").grid(row=0, column=0, sticky=W, padx=10, pady=10)
 user_id_entry = Entry(frame1, width=20, font=("Calibri", 12))
 user_id_entry.grid(row=0, column=1, padx=10, pady=10)
 
