@@ -72,6 +72,33 @@ def update_record():
     else:
         messagebox.showwarning("Warning", "Please enter an ID to update.")
 
+def delete_record():
+    record_id = entry_id.get()
+
+    if record_id:
+        conn = sqlite3.connect('hospital.db')
+        cursor = conn.cursor()
+
+        # Deleting the record by ID
+        cursor.execute("DELETE FROM patients WHERE id=?", (record_id,))
+        conn.commit()
+        conn.close()
+
+        if cursor.rowcount > 0:
+            messagebox.showinfo("Success", f"Record ID {record_id} deleted successfully!")
+            entry_id.delete(0, END)
+            entry_fname.delete(0, END)
+            entry_lname.delete(0, END)
+            entry_age.delete(0, END)
+            entry_address.delete(0, END)
+            entry_blood_group.delete(0, END)
+            entry_contact.delete(0, END)
+            entry_email.delete(0, END)
+        else:
+            messagebox.showwarning("Warning", f"No record found with ID {record_id}.")
+    else:
+        messagebox.showwarning("Warning", "Please enter an ID to delete.")
+
 # Creating label and entry to input the record ID
 Label(root, text="Enter Record ID:").grid(row=0, column=0, padx=10, pady=10)
 entry_id = Entry(root)
@@ -113,5 +140,8 @@ entry_email.grid(row=7, column=1, padx=10, pady=10)
 # Button to update the record
 update_button = Button(root, text="Update Record", command=update_record)
 update_button.grid(row=8, column=1, pady=20)
+
+delete_button = Button(root, text="Delete Record", command=delete_record)
+delete_button.grid(row=8, column=2, pady=20)
 
 root.mainloop()
