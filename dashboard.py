@@ -123,11 +123,5 @@ doc_name.pack(padx=10,pady=10,anchor="w")
 doc_specilist=Label(frame6,text="Hematology",font=("Arial",12), justify="left")
 doc_specilist.pack(padx=10,pady=0,anchor="w")
 
-def home():
-    root.destroy()
-    import homepage
-
-back_home=Button(text="Back",command=home)
-back_home.place(x=0,y=0)
 
 mainloop()
