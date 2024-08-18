@@ -106,5 +106,4 @@ back_home=Button(text="Back",command=home)
 back_home.place(x=0,y=0)
 
 root.mainloop()
-
 conn.close()
