@@ -1,6 +1,7 @@
 from tkinter import *
 from tkinter import messagebox
 from tkinter import ttk
+from PIL import ImageTk, Image
 import sqlite3
 
 root=Tk()
@@ -98,7 +99,11 @@ submit_button.place(x=300,y=310)
 view_button = Button(root, text="View Appointments", command=view_appointments)
 view_button.place(x=300,y=350)
 
-
+picture=Image.open("team_doctor.jpg")
+resize_pic=picture.resize((200,300))
+final_picture=ImageTk.PhotoImage(resize_pic)
+picture_label=Label(root,image=final_picture)
+picture_label.place(x=0,y=100)
 
 root.mainloop()
 
