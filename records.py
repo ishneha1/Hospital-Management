@@ -1,5 +1,6 @@
 from tkinter import *
 from tkinter import messagebox
+from PIL import ImageTk, Image
 import sqlite3
 
 root = Tk()
@@ -143,5 +144,12 @@ update_button.grid(row=8, column=1, pady=20)
 
 delete_button = Button(root, text="Delete Record", command=delete_record)
 delete_button.grid(row=8, column=2, pady=20)
+
+
+picture=Image.open("records.jpeg")
+resize_pic=picture.resize((300,350))
+final_picture=ImageTk.PhotoImage(resize_pic)
+picture_label=Label(root,image=final_picture)
+picture_label.place(x=400,y=0)
 
 root.mainloop()
