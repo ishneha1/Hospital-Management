@@ -51,12 +51,7 @@ def information():
     # Add the paragraph text to the Canvas
     canvas.create_text(370, 350, text=paragraph, fill="black", font=("Arial", 16), width=500,state=DISABLED)
 
-    def home():
-        root1.destroy()
-        import homepage
-
-    back_home=Button(text="Back",command=home)
-    back_home.place(x=0,y=0)
+    
     
     mainloop()
 
