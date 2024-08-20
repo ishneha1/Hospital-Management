@@ -20,7 +20,7 @@ def logged():
         window.destroy()
         import homepage
     else:
-        messagebox.showerror("Login Failed", "Invalid username or password")
+        messagebox.showerror("Login Failed", "Invalid email or password")
 
     # Close the connection
     conn.close()

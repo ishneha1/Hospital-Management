@@ -106,5 +106,4 @@ picture_label=Label(root,image=final_picture)
 picture_label.place(x=0,y=100)
 
 root.mainloop()
-
 conn.close()
